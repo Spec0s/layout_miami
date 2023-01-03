@@ -9,9 +9,13 @@ window.addEventListener('hashchange', () => {
 });
 
 const send = document.querySelector('#send');
+const formData = document.querySelectorAll('.contacts__personal');
 
 send.addEventListener('click', buttonSend);
 
 function buttonSend(event) {
   event.preventDefault();
+  formData[0].value = '';
+  formData[1].value = '';
+  formData[2].value = '';
 }
